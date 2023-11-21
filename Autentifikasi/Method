@@ -1,0 +1,6 @@
+$user = $this->ModelUser->cekData(['email' => $email])->row_array();
+
+ public function cekData($where = null)
+    {
+        return $this->db->get_where('user', $where);
+    }
